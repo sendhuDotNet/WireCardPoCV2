@@ -99,6 +99,7 @@ p {
 
 /* ----- Typography ----- */
 body {
+   
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -219,15 +220,74 @@ strong {
     border-color: #e91e63 !important;
     background-color: #e91e63 !important;
 }   
-.card-body-generatePinYes{
+.card-body-generatePinYes,.card-body-generatePinNo{
     background: #fff;
     padding: 20px;
     padding-bottom: 0px;
     padding-top: 0px;
     margin-left: 10px;
     margin-right:10px;
+    display:none;
 }   
 /* Generate Pin */
+
+/* control Spends */
+.setExpenses{
+    background-color:#ccc;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+.setExpenses a{
+    width:100%;
+}
+.setExpenses a:hover{
+    cursor: pointer;
+}
+.setExpenses label{
+    padding-top:5px;
+    padding-bottom:0px;
+}
+.setExpenses i{
+    margin-right:10px;
+}
+.card-body-setExpenses{
+    padding-top: 0px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border: 1px solid #ccc;
+    display: none;
+}
+.dailyLimit{
+    margin-left:-2px;
+}
+.yearlyLimit,.monthlyLimit,.weeklyLimit,.dailyLimit{
+    flex: 0 0 24% !important;
+    max-width: 258px !important;
+    border: 1px solid #e5e5e5;
+    margin-right: 21px;
+    padding: 0px;
+}
+.yearlyLimit label,.monthlyLimit label,.weeklyLimit label,.dailyLimit label{
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}    
+#dailyTable,#weeklyTable,#monthlyTable,#yearlyTable,.table tbody td{
+    padding: 5px;
+    vertical-align: middle;
+}
+#dailyTable,#weeklyTable,#monthlyTable,#yearlyTable,.table thead th {
+    vertical-align: bottom;
+    /* border: 2px solid #dee2e6; */
+    padding: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    background: #cccccc;
+    color: black;
+}    
+
+/* control spends */
 .title--sbold {
     font-weight: 600;
 }
@@ -553,11 +613,11 @@ section {
 }
 
 .au-btn--green {
-    background: #63c76a;
+    background: #218838;
 }
 
 .au-btn--green:hover {
-    background: #59bd60;
+    background: #218838;
 }
 
 .au-btn-plus {
@@ -14929,7 +14989,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .bg-c1 {
-    background: #00ad5f;
+    background: #555555;
 }
 
 .bg-c2 {
@@ -14937,7 +14997,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .bg-c3 {
-    background: #ff8300;
+    background: #555555;
 }
 
 .bg-flat-color-1 {

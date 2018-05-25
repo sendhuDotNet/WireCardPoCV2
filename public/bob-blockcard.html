@@ -260,110 +260,57 @@
                             <div class="col-xl-12">
                                 <!-- RECENT REPORT 2-->
                                 <div class="recent-report2-transactions">
-                                    <h3 class="title-3 title-Page">Transactions</h3>
+                                    <h3 class="title-3 title-Page">Block Card</h3>
                                     <div class="card-body-transactions card-block">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
-                                                <div class="col-12 col-md-3">
-                                                    <label class=" form-control-label">From Date </label>
+                                                <div class="col-12 col-md-2">
+                                                    <label class=" form-control-label">Card</label>
                                                 </div>
-                                                <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
-                                                        class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
-                                                        name="fromDate" placeholder="DD-MMM-YYYY"
-                                                        path=" Form Date" id="fromDate">
-                                                    <input type="button" class="btn btn-default"
-                                                        name="fromDate_btn" id="fromDate_btn">
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">                                           
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">To Date</label>
-                                                </div>
-                                                <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
-                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust transaction-input"
-                                                        name="toDate" placeholder="DD-MMM-YYYY"
-                                                        path=" Form Date" id="toDate">
-                                                    <input type="button" class="btn btn-default"
-                                                        name="toDate_btn" id="toDate_btn">
+                                                <div class="col-12 col-md-6" style="display: inherit;">
+                                                    <p>4448-XXXX-XXXX-8743</p>
                                                 </div>
                                             </div>
                                             <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Transaction Type </label>
+                                                <div class="col-12 col-md-2">
+                                                    <label class=" form-control-label">Status</label>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <select name="select" id="select" class="form-control transaction-select">
-                                                            <option value="0">Please select</option>
-                                                            <option value="1">Both</option>
-                                                            <option value="2">Debit</option>
-                                                            <option value="3">Credit</option>
-                                                        </select>
+                                                <div class="col-12 col-md-6 " style="display: inherit;">
+                                                    <p> Active</p>
                                                 </div>
                                             </div>
-                                            <!-- <div class="row form-group">
-                                                    <div class="col col-md-3">
-                                                        <label class=" form-control-label">Card</label>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <p>4448-88XX-XXXX-5500</p>
-                                                        <select name="select" id="select" class="form-control transaction-select">
-                                                                <option value="0">Please select</option>
-                                                                <option value="1">All</option>
-                                                                <option value="2"></option>
-                                                        </select>
-                                                    </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-2">
+                                                    <label class=" form-control-label">Reason<span style="color:red;">*</span> </label>
                                                 </div>
-                                            </div> -->
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <select name="select" class="form-control" id="blockReason">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">Both</option>
+                                                        <option value="2">Debit</option>
+                                                        <option value="3">Credit</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-2">
+                                                    <label class=" form-control-label">Remarks</label>
+                                                </div>
+                                                <div class="col-12 col-md-6 " style="display: inherit;">
+                                                    <textarea class="form-control" rows="3" id="comment" style="width:82%;"></textarea>
+                                                </div>
+                                            </div>
                                             <div class="row form-group">
                                                 <div class="col-12 col-md-12 text-center">
-                                                    <button type="submit" class="btn btn-success btn-md" id="submitTransaction" >
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="cardBlockSubmit" disabled style="margin-right:50px;">
                                                         Submit
                                                     </button>
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="submitNewPin" >
+                                                            Reset
+                                                    </button>
                                                 </div>
-                                            </div>
+                                            </div> 
                                         </form>
-                                        <div class="transactionTableClass">
-                                            <table class="table table-striped" id="transactionTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Date</th>
-                                                        <th>Reference No</th>
-                                                        <th>Description</th>
-                                                        <th>Card No</th>
-                                                        <th>Debit</th>
-                                                        <th>Credit</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>30-05-2018</td>
-                                                        <td>843245</td>
-                                                        <td>HOTELS COM126051618120</td>
-                                                        <td>4448-XXX-XXXX-8743</td>
-                                                        <td>USD 25000</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>30-05-2018</td>
-                                                        <td>855556</td>
-                                                        <td>HOTELS COM127598293577</td>
-                                                        <td>4448-XXX-XXXX-8743</td>
-                                                        <td>SGD 6800</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>06-05-2018</td>
-                                                        <td>820003</td>
-                                                        <td>HORSEBRIDGE ARTS & COM</td>
-                                                        <td>4448-XXX-XXXX-8743</td>
-                                                        <td>USD 1100</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -1701,7 +1701,39 @@ $("#toDate_btn").datepicker({ dateFormat: 'yy-mm-dd' }).on('changeDate',function
 });
 $("#statementTable").dataTable();
 $("#transactionTable").dataTable();
+// $("#dailyTable").dataTable();
+// $("#weeklyTable").dataTable();
+// $("#monthlyTable").dataTable();
+// $("#yearlyTable").dataTable();
 $("#submitTransaction").on("click",function(){
   $(".transactionTableClass").show();
   return false;
 });
+$('input[type="radio"][name=group103]').on('change',function(){
+  if($(this).val()=="yes"){
+    $(".card-body-generatePinYes").show();
+    $(".card-body-generatePinNo").hide();
+    return false;
+  }
+  else{
+    $(".card-body-generatePinYes").hide();
+    $(".card-body-generatePinNo").show();
+    return false;
+  }
+});
+$("#setExpenseSlide").on("click",function(){
+  $(".card-body-setExpenses").slideToggle();
+});
+$("#blockReason").on("change",function(){
+  if($("#blockReason").val()!=0){
+    $('#cardBlockSubmit').prop("disabled", false);
+  }
+});
+//to avoid reload on button click
+$(".commonButton").on("click",function(){
+  return false;
+});
+// $("#loginSubmit").on("click",function(){
+//   alert("shruthi");
+//   location.href='bob-landing.html';
+// })

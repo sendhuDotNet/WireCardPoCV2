@@ -54,7 +54,7 @@
                         <img src="images/icon/visitorPhoto.png" alt="User Icon" />
                     </div>
                     <h4 class="name">Bob Harry</h4>
-                    <a href="#">Sign out</a>
+                    <a href="login.html">Sign out</a>
                 </div>
                 <nav class="navbar-sidebar2 left-menu-slider">
                         <ul class="list-unstyled navbar__list">
@@ -109,7 +109,7 @@
                                             <i class="fab fa-buromobelexperte"></i>Generate Pin</a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="bob-blockcard.html">
                                             <i class="fas fa-ban"></i>Block Card</a>
                                     </li>
                                     <li>
@@ -117,7 +117,7 @@
                                             <i class="far fa-credit-card"></i>Redeem Points</a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="bob-controlSpends.html">
                                             <i class="far fa-credit-card"></i>Control Spends</a>
                                     </li>
                                 </ul>
@@ -205,7 +205,7 @@
                                         </div>
                                         <div class="notifi__item">
                                             <div class="bg-c2 img-cir img-40">
-                                                <i class="zmdi zmdi-account-box"></i>
+                                                <i class="fa fa-exclamation-circle"></i>
                                             </div>
                                             <div class="content">
                                                 <p>Your account has been blocked</p>
@@ -270,25 +270,25 @@
                                             </div>
                                             <div class="row form-group">
                                                 <div class="form-check radio-pink-gap ">
-                                                    <input name="group103" type="radio" class="with-gap" id="radio109">
+                                                    <input name="group103" type="radio" class="with-gap" id="radio109" value="yes">
                                                     <label for="radio109">Yes</label>
                                                 </div>
                                                 
                                                 <div class="form-check radio-pink-gap">
-                                                    <input name="group103" type="radio" class="with-gap" id="radio110" No>
+                                                    <input name="group103" type="radio" class="with-gap" id="radio110" value="no">
                                                     <label for="radio110">No</label>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
-                                    <!-- <div class="card-body-generatePinYes card-block">
+                                    <div class="card-body-generatePinYes card-block">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
                                                 <div class="col-12 col-md-3">
                                                     <label class=" form-control-label">Old Pin</label>
                                                 </div>
                                                 <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
+                                                    <input type="password"
                                                         class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
                                                         name="oldPin" >
                                                 </div>
@@ -298,7 +298,7 @@
                                                     <label class=" form-control-label">New Pin</label>
                                                 </div>
                                                 <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
+                                                    <input type="password"
                                                         class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
                                                         name="newPin" >
                                                 </div>
@@ -308,20 +308,98 @@
                                                     <label class=" form-control-label">Confirm New Pin</label>
                                                 </div>
                                                 <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
+                                                    <input type="password"
                                                         class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
                                                         name="confirmNewPin" >
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col-12 col-md-12 text-center">
-                                                    <button type="submit" class="btn btn-success btn-md" id="submitPin" >
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="submitPin" >
                                                         Submit
                                                     </button>
                                                 </div>
                                             </div>
                                         </form>
-                                    </div> -->
+                                    </div>
+                                    <div class="card-body-generatePinNo card-block">
+                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">New Pin</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="password"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="newPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Date Of Birth</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="text"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust "
+                                                        name="toDate" placeholder="DD-MMM-YYYY"
+                                                        path=" Form Date" id="toDate">
+                                                    <input type="button" class="btn btn-default"
+                                                        name="toDate_btn" id="toDate_btn">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Confirm Pin</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="password"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="newPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Security Question</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <select name="select" id="select" class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">What is Your Favourite Food ?</option>
+                                                        <option value="2">What is your Pet's Name</option>
+                                                        <option value="3">Who is your childhood hero?</option>
+                                                        <option value="4">What is your first school name</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Registered phone</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="text"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="newPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Security Answer</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="text"
+                                                    class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                    name="newPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-12 text-center">
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="submitNewPin" >
+                                                        Submit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
