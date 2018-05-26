@@ -204,7 +204,40 @@ strong {
     color: black !important;
 }
 /* Rewards */
-
+/* Redeem points */
+.slidecontainer {
+    width: 100%;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 12px;
+    background: #d3d3d3;
+    outline: none;
+    margin-top: 5px;
+    opacity: 0.7;
+    line-height: 7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 25px;
+    background: #1e7e34;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+/* Redeem Points */
 /* Generate Pin */
 
 .radio-pink [type="radio"]:checked+label:after {
@@ -220,7 +253,7 @@ strong {
     border-color: #e91e63 !important;
     background-color: #e91e63 !important;
 }   
-.card-body-generatePinYes,.card-body-generatePinNo{
+.card-body-generatePinYes,.card-body-generatePinNo,.card-body-redeemOnly,.card-body-pointsPlusPay,.card-body-cashRedemptions{
     background: #fff;
     padding: 20px;
     padding-bottom: 0px;
@@ -229,6 +262,12 @@ strong {
     margin-right:10px;
     display:none;
 }   
+.card-body-redeemOnly{
+    display:block;
+}
+/* .card-body-pointsPlusPay,.card-body-cashRedemptions{
+    border:1px solid #e5e5e5;
+} */
 /* Generate Pin */
 
 /* control Spends */
@@ -4111,7 +4150,8 @@ section {
     padding-top: 15px;
     margin-left: -15px;
 }
-.recent-report2-transactions,.recent-report2-statement{
+.recent-report2-transactions,.recent-report2-statement,.card-body-calculateWallet,.card-body-loadBank,
+.card-body-loadWallet,.card-body-loadCreditCard{
     border: 1px solid #e5e5e5;
     background: #fff;
     padding: 20px;
@@ -4121,6 +4161,40 @@ section {
     margin-top: 10px;
     margin-left: 10px;
     margin-right:10px;
+}
+#bob-spendsCategoryChart {
+    width: 100%;
+    height: 500px;
+}
+#bob-spendsCategoryChart .amcharts-main-div .amcharts-chart-div a{
+    display:none !important;
+}
+#bob-walletSpendsChart .amcharts-main-div .amcharts-chart-div a{
+    display:none !important;
+}
+#bob-walletSpendsChart {
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;
+}
+.card-body-loadBank{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.card-body-calculateWallet,.card-body-loadCreditCard{
+    display: none;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.card-body-loadWallet{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.card-body-calculateWallet,.card-body-loadBank,.card-body-loadWallet,.card-body-loadCreditCard{
+    border: none !important;
+}
+.cardTransfer label{
+    font-size: 20px;
 }
 .recent-report2-transactions label,.recent-report2-statement label,
 .recent-report2_card-summary label,.recent-report2_last-deposit label{

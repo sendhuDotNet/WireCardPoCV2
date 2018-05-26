@@ -1681,13 +1681,21 @@ $('.splitter-panel').each(function(index, element) {
       }, 300).hide();
       return false;
   });
-  $('body').bind('mouseover', function() {
+  $('body').load('mouseover', function() {
       $('.splitter-tile-overlay.open').delay(30).clearQueue();
       $('.splitter-tile-overlay.open').delay(30).stop();
       $('.splitter-tile-overlay.open').removeClass('open').animate({
           opacity: '1'
       }, 300).show();
   });
+  $('body').bind('mouseover', function() {
+    $('.splitter-tile-overlay.open').delay(30).clearQueue();
+    $('.splitter-tile-overlay.open').delay(30).stop();
+    $('.splitter-tile-overlay.open').removeClass('open').animate({
+        opacity: '1'
+    }, 300).show();
+});
+  
 });
 $("#fromDate_btn").datepicker({ dateFormat: 'yy-mm-dd' }).on('changeDate',function(e) {
   $(this).datepicker('hide');
@@ -1721,6 +1729,38 @@ $('input[type="radio"][name=group103]').on('change',function(){
     return false;
   }
 });
+$('input[type="radio"][name=group103loadWallet]').on('change',function(){
+  if($(this).val()=="bankAccount"){
+    $(".card-body-loadBank").show();
+    $(".card-body-loadCreditCard").hide();
+    return false;
+  }
+  else{
+    $(".card-body-loadBank").hide();
+    $(".card-body-loadCreditCard").show();
+    return false;
+  }
+});
+$('input[type="radio"][name=group103Redeem]').on('change',function(){
+  if($(this).val()=="pp"){
+    $(".card-body-redeemOnly").show();
+    $(".card-body-pointsPlusPay").show();
+    $(".card-body-cashRedemptions").hide();
+    return false;
+  }
+  else if($(this).val()=="cr"){
+    $(".card-body-redeemOnly").show();
+    $(".card-body-pointsPlusPay").hide();
+    $(".card-body-cashRedemptions").show();
+    return false;
+  }
+  else{
+    $(".card-body-redeemOnly").show();
+    $(".card-body-pointsPlusPay").hide();
+    $(".card-body-cashRedemptions").hide();
+    return false;
+  }
+});
 $("#setExpenseSlide").on("click",function(){
   $(".card-body-setExpenses").slideToggle();
 });
@@ -1729,11 +1769,143 @@ $("#blockReason").on("change",function(){
     $('#cardBlockSubmit').prop("disabled", false);
   }
 });
+$("#RedeemMsgView").on("click",function(){
+  alert("Shopping functionality not yet implemented");
+});
+$("#confirmCashRedeem").on("click",function(){
+  $(".card-body-cashRedemptions").hide();
+  $('input[type="radio"][value=pp]').attr("checked",checked);
+});
+$("#confirmPointsRedeem").on("click",function(){
+  $(".card-body-pointsPlusPay").hide();
+  $('input[type="radio"][value=pp]').attr("checked",checked);
+});
+$("#loadWalletConfirm").on("click",function(){
+  $(".card-body-calculateWallet").hide();
+});
+$("#loadWalletCancel").on("click",function(){
+  window.location.href='bob-landing.html';
+});
 //to avoid reload on button click
 $(".commonButton").on("click",function(){
   return false;
 });
-// $("#loginSubmit").on("click",function(){
-//   alert("shruthi");
-//   location.href='bob-landing.html';
-// })
+$("#myRange").on("input",function(){
+  $("#selectedPoints").text($("#myRange").val());
+  $("#leftPoints").text(966-$("#myRange").val());
+});
+$("#calculateWallet").on("click",function(){
+    $(".card-body-calculateWallet").show();
+    return false;
+});
+var chart = AmCharts.makeChart( "bob-spendsCategoryChart", {
+  "type": "pie",
+  "theme": "light",
+  "dataProvider": [ {
+    "country": "Miscellanous",
+    "value": 260
+  }, {
+    "country": "E-Commerce",
+    "value": 201
+  }, {
+    "country": "Fuel",
+    "value": 65
+  }, {
+    "country": "Resturants",
+    "value": 39
+  }, {
+    "country": "Shopping",
+    "value": 19
+  }, {
+    "country": "Transfer",
+    "value": 10
+  } ],
+  "valueField": "value",
+  "titleField": "country",
+  "outlineAlpha": 0.4,
+  "depth3D": 15,
+  "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+  "angle": 30,
+  "export": {
+    "enabled": false
+  }
+} );
+var chart1 = AmCharts.makeChart("bob-walletSpendsChart", {
+	"type": "serial",
+     "theme": "none",
+	"categoryField": "Month",
+	"rotate": true,
+	"startDuration": 1,
+	"categoryAxis": {
+		"gridPosition": "start",
+		"position": "left"
+	},
+	"trendLines":[],
+	"graphs": [
+		{
+			"balloonText": "Expenses:USD[[value]]",
+			"fillAlphas": 0.8,
+			"id": "AmGraph-1",
+			"lineAlpha": 0.2,
+      "title": "USD",
+      "legendPeriodValueText": "total: [[value]] mi",
+      "legendValueText": "[[value]] mi",
+			"type": "column",
+			"valueField": "USD"
+		},
+		{
+			"balloonText": "Expenses:INR[[value]]",
+			"fillAlphas": 0.8,
+			"id": "AmGraph-2",
+			"lineAlpha": 0.2,
+			"title": "INR",
+			"type": "column",
+			"valueField": "INR"
+    },
+    {
+			"balloonText": "Expenses:SGD[[value]]",
+			"fillAlphas": 0.8,
+			"id": "AmGraph-3",
+			"lineAlpha": 0.2,
+			"title": "SGD",
+			"type": "column",
+			"valueField": "SGD"
+		}
+	],
+	"guides": [],
+	"valueAxes": [
+		{
+			"id": "ValueAxis-1",
+			"position": "top",
+			"axisAlpha": 0
+		}
+	],
+	"allLabels": [],
+	"balloon": {},
+	"titles": [],
+	"dataProvider": [
+		{
+			"Month": "Feb",
+			"USD": 23.5,
+      "INR": 35.1,
+      "SGD": 19.1
+		},
+		{
+			"Month": "Mar",
+			"USD": 26.2,
+      "INR": 45.8,
+      "SGD": 12.1
+		},
+		{
+			"Month": "Apr",
+			"USD": 30.1,
+      "INR": 29.9,
+      "SGD": 13.1
+		}
+	
+	],
+    "export": {
+    	"enabled": false
+     }
+
+});
