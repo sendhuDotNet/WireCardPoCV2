@@ -1695,7 +1695,24 @@ $('.splitter-panel').each(function(index, element) {
         opacity: '1'
     }, 300).show();
 });
-  
+});
+$("#SignIn").on("click",function(){
+    if($("#userName").val()=="Bob"){
+      window.location.href='bob-landing.html';
+    }
+    if($("#userName").val()=="Alice"){
+      window.location.href='alice-landingPage.html';
+    }
+});
+$("#selectCardReward").on("change",function(){
+  if($("#selectCardReward").val()==1){
+    $("#card1Reward").show();
+    $("#card2Reward").hide();
+  }
+  else{
+    $("#card2Reward").show();
+    $("#card1Reward").hide();
+  }
 });
 $("#fromDate_btn").datepicker({ dateFormat: 'yy-mm-dd' }).on('changeDate',function(e) {
   $(this).datepicker('hide');
@@ -1717,6 +1734,21 @@ $("#submitTransaction").on("click",function(){
   $(".transactionTableClass").show();
   return false;
 });
+$("#getCardStatement").on("click",function(){
+    if($("#selectCard").val()==1){
+      $(".transactionTableClass").show();
+      $("#card1Table").show();
+      $("#card2Table").hide();
+      return false;
+    }
+    else{
+      $(".transactionTableClass").show();
+      $("#card2Table").show();
+      $("#card1Table").hide();
+      return false;
+    }
+});
+
 $('input[type="radio"][name=group103]').on('change',function(){
   if($(this).val()=="yes"){
     $(".card-body-generatePinYes").show();
