@@ -2011,15 +2011,11 @@ var chart = AmCharts.makeChart("alice-monthyExpenses", {
       "visits": 1022,
       "color": "#FCD202"
   }, {
-      "country": "Jun",
+      "country": "May",
       "visits": 1782,
       "color": "#F8FF01"
   },
-  {
-    "country": "Jul",
-    "visits": 962,
-    "color": "#F8FF01"
-}],
+],
   "valueAxes": [{
       "position": "left",
       "axisAlpha":0,
