@@ -264,14 +264,14 @@
                             <div class="col-xl-12">
                                 <!-- RECENT REPORT 2-->
                                 <div class="recent-report2-transactions">
-                                    <h3 class="title-3 title-Page">Transactions</h3>
+                                    <h3 class="title-3 title-Page">Balance Transfer</h3>
                                     <div class="card-body-transactions card-block">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label class=" form-control-label">Card Number</label>
                                                 </div>
-                                                <div class="col-12 col-md-6">
+                                                <div class="col-12 col-md-5">
                                                     <select name="select" id="selectCard" class="form-control transaction-select">
                                                         <option value="0">Please select</option>
                                                         <option value="1">4488-XXXX-XXXX-5518</option>
@@ -280,119 +280,117 @@
                                                 </div>
                                             </div>
                                             <div class="row form-group">
-                                                <div class="col-12 col-md-3">
-                                                    <label class=" form-control-label">From Date </label>
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Account Number</label>
                                                 </div>
-                                                <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
-                                                        class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
-                                                        name="fromDate" placeholder="DD-MMM-YYYY"
-                                                        path=" Form Date" id="fromDate">
-                                                    <input type="button" class="btn btn-default"
-                                                        name="fromDate_btn" id="fromDate_btn">
+                                                <div class="col-12 col-md-3">
+                                                    <p>1003000000000124555 </p>
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Account Balance</label>
+                                                </div>
+                                                <div class="col-12 col-md-3">
+                                                    <p>USD 628.80</p>
                                                 </div>
                                             </div>
-                                            <div class="row form-group">                                           
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">To Date</label>
-                                                </div>
-                                                <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
-                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust transaction-input"
-                                                        name="toDate" placeholder="DD-MMM-YYYY"
-                                                        path=" Form Date" id="toDate">
-                                                    <input type="button" class="btn btn-default"
-                                                        name="toDate_btn" id="toDate_btn">
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <label class=" form-control-label" style="font-size:18px;">External credit card details</label>
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label class=" form-control-label">Transaction Type </label>
+                                                    <label class=" form-control-label">Credit card number</label>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <select name="select" id="selectCard" class="form-control transaction-select">
-                                                            <option value="0">Please select</option>
-                                                            <option value="1">Both</option>
-                                                            <option value="2">Debit</option>
-                                                            <option value="3">Credit</option>
-                                                        </select>
+                                                <div class="col-12 col-md-5">
+                                                    <input type="text"
+                                                    class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                    name="oldPin" >
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <button type="submit" class="btn btn-success btn-sm" id="getCardStatement" >
+                                                        Lookup User
+                                                    </button>
                                                 </div>
                                             </div>
-                                            
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Name of issuing bank </label>
+                                                </div>
+                                                <div class="col-12 col-md-5">
+                                                    <input type="text"
+                                                    class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                    name="oldPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Amount to be transfered</label>
+                                                </div>
+                                                <div class="col-12 col-md-5">
+                                                    <input type="text"
+                                                    class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                    name="oldPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Select your offer</label>
+                                                </div>
+                                                <div class="col-12 col-md-4" >
+                                                    <select name="select" id="selectCard" class="form-control " style="width: 95.5%;">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">6 months 3% interest</option>
+                                                        <option value="2">12 months 6% interest</option>
+                                                        <option value="2">18 months 9% interest</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <label class=" form-control-label" style="font-size:18px;">Verify and confirm your banking</label>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3 box">
+                                                    <label>Transfer from other bank credit card</label>
+                                                    <p></p>
+                                                </div>
+                                                <div class="col-12 col-md-2 box">
+                                                        <label> Amount to be transfered</label>
+                                                        <p>XXXXXXX</p>
+                                                </div>
+                                                <div class="col-12 col-md-2 box">
+                                                        <label>Tenure (in days)</label>
+                                                        <p style="padding-top:26px;">180 days</p>
+                                                </div>
+                                                <div class="col-12 col-md-2 box">
+                                                        <label>Rate of interest %pm</label>
+                                                        <p>X% pm</p>
+                                                </div>
+                                                <div class="col-12 col-md-2 box">
+                                                        <label> Processing fee</label>
+                                                        <p style="padding-top:26px;">2000 USD</p>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                        <label class=" form-control-label" style="font-size:14px;"><input type="checkbox" value="">
+                                                            I have agree to the Balance Transfer Terms and Condition
+                                                        </label>
+                                                </div>
+                                            </div>
                                             <div class="row form-group">
                                                 <div class="col-12 col-md-12 text-center">
-                                                    <button type="submit" class="btn btn-success btn-md" id="getCardStatement" >
-                                                        Submit
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="confrimBalanceTransfer" style="margin-right:50px;">
+                                                       Confirm
+                                                    </button>
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="getCardStatement" >
+                                                        Cancel
                                                     </button>
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="transactionTableClass">
-                                            <table class="table table-striped" id="transactionTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Date</th>
-                                                        <th>Reference No</th>
-                                                        <th>Description</th>
-                                                        <th>Card No</th>
-                                                        <th>Debit</th>
-                                                        <th>Credit</th>
-                                                    </tr>
-                                                </thead>					
-                                                <tbody id="card1Table" style="display:none;">
-                                                    <tr>
-                                                        <td>15-05-2018</td>
-                                                        <td>8400110</td>
-                                                        <td>Payment Received</td>
-                                                        <td>4488-XXXX-XXXX-5518</td>
-                                                        <td></td>
-                                                        <td>USD 125000</td>
-                                                    </tr>
-                                                    <tr>				
-                                                        <td>14-05-2018</td>
-                                                        <td>8300345</td>
-                                                        <td>BABA CONFECTIONERY</td>
-                                                        <td>4448-XXX-XXXX-5518</td>
-                                                        <td>USD 6800</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>					
-                                                        <td>06-05-2018</td>
-                                                        <td>8300135</td>
-                                                        <td>B Q000000000000000</td>
-                                                        <td>4448-XXX-XXXX-5518</td>
-                                                        <td>USD 25000</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                                <tbody id="card2Table" style="display:none;">
-                                                    <tr>				
-                                                        <td>30-04-2018</td>
-                                                        <td>7990000</td>
-                                                        <td>ADOBE CREATIVE CLOUD</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 15000</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>								
-                                                        <td>30-04-2018</td>
-                                                        <td>7998100</td>
-                                                        <td>ASDA HOME SHOPPING</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 6800</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>									
-                                                        <td>28-04-2018</td>
-                                                        <td>7891395</td>
-                                                        <td>WWW.OXFORDSHIRE.GOV</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 7645</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

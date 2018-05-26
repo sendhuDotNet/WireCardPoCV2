@@ -264,15 +264,15 @@
                             <div class="col-xl-12">
                                 <!-- RECENT REPORT 2-->
                                 <div class="recent-report2-transactions">
-                                    <h3 class="title-3 title-Page">Transactions</h3>
+                                    <h3 class="title-3 title-Page">Generate Pin</h3>
                                     <div class="card-body-transactions card-block">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Card Number</label>
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Card</label>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <select name="select" id="selectCard" class="form-control transaction-select">
+                                                <div class="col-12 col-md-6 " style="display: inherit;">
+                                                    <select name="select" id="selectCardReward" class="form-control transaction-select">
                                                         <option value="0">Please select</option>
                                                         <option value="1">4488-XXXX-XXXX-5518</option>
                                                         <option value="2">4488-XXXX-XXXX-5500</option>
@@ -280,25 +280,83 @@
                                                 </div>
                                             </div>
                                             <div class="row form-group">
-                                                <div class="col-12 col-md-3">
-                                                    <label class=" form-control-label">From Date </label>
-                                                </div>
-                                                <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
-                                                        class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
-                                                        name="fromDate" placeholder="DD-MMM-YYYY"
-                                                        path=" Form Date" id="fromDate">
-                                                    <input type="button" class="btn btn-default"
-                                                        name="fromDate_btn" id="fromDate_btn">
+                                                <div class="col-12 col-md-12">
+                                                    <label class=" form-control-label">Do you remember your old pin ?</label>
                                                 </div>
                                             </div>
-                                            <div class="row form-group">                                           
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">To Date</label>
+                                            <div class="row form-group">
+                                                <div class="form-check radio-pink-gap ">
+                                                    <input name="group103" type="radio" class="with-gap" id="radio109" value="yes">
+                                                    <label for="radio109">Yes</label>
+                                                </div>
+                                                
+                                                <div class="form-check radio-pink-gap">
+                                                    <input name="group103" type="radio" class="with-gap" id="radio110" value="no">
+                                                    <label for="radio110">No</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-body-generatePinYes card-block">
+                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Old Pin</label>
                                                 </div>
                                                 <div class="col-12 col-md-6 " style="display: inherit;">
+                                                    <input type="password"
+                                                        class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="oldPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">New Pin</label>
+                                                </div>
+                                                <div class="col-12 col-md-6 " style="display: inherit;">
+                                                    <input type="password"
+                                                        class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="newPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Confirm New Pin</label>
+                                                </div>
+                                                <div class="col-12 col-md-6 " style="display: inherit;">
+                                                    <input type="password"
+                                                        class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="confirmNewPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-12 text-center">
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="submitPin1" >
+                                                        Submit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-body-generatePinNo card-block">
+                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">New Pin</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="password"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="newPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Date Of Birth</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
                                                     <input type="text"
-                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust transaction-input"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust "
                                                         name="toDate" placeholder="DD-MMM-YYYY"
                                                         path=" Form Date" id="toDate">
                                                     <input type="button" class="btn btn-default"
@@ -306,93 +364,57 @@
                                                 </div>
                                             </div>
                                             <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Transaction Type </label>
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Confirm Pin</label>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <select name="select" id="selectCard" class="form-control transaction-select">
-                                                            <option value="0">Please select</option>
-                                                            <option value="1">Both</option>
-                                                            <option value="2">Debit</option>
-                                                            <option value="3">Credit</option>
-                                                        </select>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="password"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="newPin" >
                                                 </div>
                                             </div>
-                                            
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Security Question</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <select name="select" id="select" class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">What is Your Favourite Food ?</option>
+                                                        <option value="2">What is your Pet's Name</option>
+                                                        <option value="3">Who is your childhood hero?</option>
+                                                        <option value="4">What is your first school name</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Registered phone</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="text"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        name="newPin" >
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Security Answer</label>
+                                                </div>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <input type="text"
+                                                    class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                    name="newPin" >
+                                                </div>
+                                            </div>
                                             <div class="row form-group">
                                                 <div class="col-12 col-md-12 text-center">
-                                                    <button type="submit" class="btn btn-success btn-md" id="getCardStatement" >
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="submitPin2" >
                                                         Submit
                                                     </button>
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="transactionTableClass">
-                                            <table class="table table-striped" id="transactionTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Date</th>
-                                                        <th>Reference No</th>
-                                                        <th>Description</th>
-                                                        <th>Card No</th>
-                                                        <th>Debit</th>
-                                                        <th>Credit</th>
-                                                    </tr>
-                                                </thead>					
-                                                <tbody id="card1Table" style="display:none;">
-                                                    <tr>
-                                                        <td>15-05-2018</td>
-                                                        <td>8400110</td>
-                                                        <td>Payment Received</td>
-                                                        <td>4488-XXXX-XXXX-5518</td>
-                                                        <td></td>
-                                                        <td>USD 125000</td>
-                                                    </tr>
-                                                    <tr>				
-                                                        <td>14-05-2018</td>
-                                                        <td>8300345</td>
-                                                        <td>BABA CONFECTIONERY</td>
-                                                        <td>4448-XXX-XXXX-5518</td>
-                                                        <td>USD 6800</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>					
-                                                        <td>06-05-2018</td>
-                                                        <td>8300135</td>
-                                                        <td>B Q000000000000000</td>
-                                                        <td>4448-XXX-XXXX-5518</td>
-                                                        <td>USD 25000</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                                <tbody id="card2Table" style="display:none;">
-                                                    <tr>				
-                                                        <td>30-04-2018</td>
-                                                        <td>7990000</td>
-                                                        <td>ADOBE CREATIVE CLOUD</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 15000</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>								
-                                                        <td>30-04-2018</td>
-                                                        <td>7998100</td>
-                                                        <td>ASDA HOME SHOPPING</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 6800</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>									
-                                                        <td>28-04-2018</td>
-                                                        <td>7891395</td>
-                                                        <td>WWW.OXFORDSHIRE.GOV</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 7645</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

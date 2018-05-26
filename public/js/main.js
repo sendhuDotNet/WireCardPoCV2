@@ -1668,6 +1668,10 @@
   }
 
 })(jQuery);
+//to avoid reload on button click
+$(".commonButton").on("click",function(){
+  return false;
+});
 $('.splitter-panel').each(function(index, element) {
   $('.splitter-tile').bind('mouseover', function(e) {
       if ($(this).find('.splitter-tile-overlay').hasClass('open')) {
@@ -1713,6 +1717,49 @@ $("#selectCardReward").on("change",function(){
     $("#card2Reward").show();
     $("#card1Reward").hide();
   }
+});
+$("#cardlimitSlider").on("input",function(){
+  $("#requestedCardLimit").text($("#cardlimitSlider").val());
+  // var maxVal= $("#myRange").attr("max");
+  // $("#leftPoints").text(maxVal-$("#myRange").val());
+});
+$("#upgradeRequest").on("click",function(){
+    alert("Request for upgrade submitted successfully");
+});
+$("#submitAutoPay").on("click",function(){
+    alert("Auto pay has been initiated successfully");
+});
+$("#confrimBalanceTransfer").on("click",function(){
+    alert("Balance transfer is initiated successfully");
+    return false;
+});
+$("#myRange").on("input",function(){
+  $("#selectedPoints").text($("#myRange").val());
+  var maxVal= $("#myRange").attr("max");
+  $("#leftPoints").text(maxVal-$("#myRange").val());
+});
+$("#selectCardRedeem").on("change",function(){
+  $("#myRange").attr("disabled",false); 
+    if($("#selectCardRedeem").val()==1){
+      $("#redeemPoints").text(966);
+      $("#myRange").attr("max",966);
+    }
+    else{
+      $("#redeemPoints").text(3933);
+      $("#myRange").attr("max",3933);
+    }
+});
+$("#askStatement").on("click",function(){
+  alert("Statement is mailed to the registered email Id");
+});
+$("#bobAskStatement").on("click",function(){
+  alert("Statement is mailed to the registered email Id");
+});
+$("#cardBlockSubmit").on("click",function(){
+  alert("Card is blocked sucessfully");
+});
+$("#submitPin1,#submitPin2").on("click",function(){
+    alert("Your pin saved Sucessfully");
 });
 $("#fromDate_btn").datepicker({ dateFormat: 'yy-mm-dd' }).on('changeDate',function(e) {
   $(this).datepicker('hide');
@@ -1804,13 +1851,21 @@ $("#blockReason").on("change",function(){
 $("#RedeemMsgView").on("click",function(){
   alert("Shopping functionality not yet implemented");
 });
+$("#loadWalletcard").on("click",function(){
+  alert("Your wallet is loaded successfully");
+});
 $("#confirmCashRedeem").on("click",function(){
+  alert("Cash transfered sucessfully");
   $(".card-body-cashRedemptions").hide();
   $('input[type="radio"][value=pp]').attr("checked",checked);
 });
 $("#confirmPointsRedeem").on("click",function(){
+  alert("Order placed sucessfully");
   $(".card-body-pointsPlusPay").hide();
   $('input[type="radio"][value=pp]').attr("checked",checked);
+});
+$("#setExpenseLimit").on("click",function(){
+  alert("Expenses limit successfully");
 });
 $("#loadWalletConfirm").on("click",function(){
   $(".card-body-calculateWallet").hide();
@@ -1818,14 +1873,8 @@ $("#loadWalletConfirm").on("click",function(){
 $("#loadWalletCancel").on("click",function(){
   window.location.href='bob-landing.html';
 });
-//to avoid reload on button click
-$(".commonButton").on("click",function(){
-  return false;
-});
-$("#myRange").on("input",function(){
-  $("#selectedPoints").text($("#myRange").val());
-  $("#leftPoints").text(966-$("#myRange").val());
-});
+
+
 $("#calculateWallet").on("click",function(){
     $(".card-body-calculateWallet").show();
     return false;
@@ -1941,3 +1990,66 @@ var chart1 = AmCharts.makeChart("bob-walletSpendsChart", {
      }
 
 });
+var chart = AmCharts.makeChart("alice-monthyExpenses", {
+  "theme": "light",
+  "type": "serial",
+  "startDuration": 2,
+  "dataProvider": [{
+      "country": "Jan",
+      "visits": 2025,
+      "color": "#FF0F00"
+  }, {
+      "country": "Feb",
+      "visits": 182,
+      "color": "#FF6600"
+  }, {
+      "country": "Mar",
+      "visits": 1809,
+      "color": "#FF9E01"
+  }, {
+      "country": "Apr",
+      "visits": 1022,
+      "color": "#FCD202"
+  }, {
+      "country": "Jun",
+      "visits": 1782,
+      "color": "#F8FF01"
+  },
+  {
+    "country": "Jul",
+    "visits": 962,
+    "color": "#F8FF01"
+}],
+  "valueAxes": [{
+      "position": "left",
+      "axisAlpha":0,
+      "gridAlpha":0
+  }],
+  "graphs": [{
+      "balloonText": "[[category]]: <b>[[value]]</b>",
+      "colorField": "color",
+      "fillAlphas": 0.85,
+      "lineAlpha": 0.1,
+      "type": "column",
+      "topRadius":1,
+      "valueField": "visits"
+  }],
+  "depth3D": 40,
+"angle": 30,
+  "chartCursor": {
+      "categoryBalloonEnabled": false,
+      "cursorAlpha": 0,
+      "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+      "gridPosition": "start",
+      "axisAlpha":0,
+      "gridAlpha":0
+
+  },
+  "export": {
+    "enabled": false
+   }
+
+}, 0);

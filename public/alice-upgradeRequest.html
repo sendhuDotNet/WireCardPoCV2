@@ -264,135 +264,81 @@
                             <div class="col-xl-12">
                                 <!-- RECENT REPORT 2-->
                                 <div class="recent-report2-transactions">
-                                    <h3 class="title-3 title-Page">Transactions</h3>
+                                    <h3 class="title-3 title-Page">Upgrade Request</h3>
                                     <div class="card-body-transactions card-block">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Card Number</label>
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Card Number<span style="color:red;">*</span></label>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <select name="select" id="selectCard" class="form-control transaction-select">
+                                                <div class="col-12 col-md-3" style="display: inherit;">
+                                                    <select name="select" id="selectCardRedeem" class="form-control">
                                                         <option value="0">Please select</option>
                                                         <option value="1">4488-XXXX-XXXX-5518</option>
                                                         <option value="2">4488-XXXX-XXXX-5500</option>
                                                     </select>
                                                 </div>
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Current Card Limit</label>
+                                                </div>
+                                                <div class="col-12 col-md-3" style="display: inherit;">
+                                                    <p>100000 USD</p>
+                                                </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col-12 col-md-3">
-                                                    <label class=" form-control-label">From Date </label>
+                                                    <label class=" form-control-label">Requested card limit</label>
                                                 </div>
-                                                <div class="col-12 col-md-6 " style="display: inherit;">
+                                                <div class="col-12 col-md-3 slidecontainer" style="display: inherit;">
+                                                    <label id="requestedCardLimit">200000</label><p>USD</p>
+                                                </div>
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Eligeble Card Limit</label>
+                                                </div>
+                                                <div class="col-12 col-md-3 slidecontainer" style="display: inherit;">
+                                                    <input type="range" min="0" max="200000" value="200000" class="slider" id="cardlimitSlider">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Effective Date for Increase</label>
+                                                </div>
+                                                <div class="col-12 col-md-3 slidecontainer" style="display: inherit;">
                                                     <input type="text"
-                                                        class="transaction-input form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
+                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust"
                                                         name="fromDate" placeholder="DD-MMM-YYYY"
                                                         path=" Form Date" id="fromDate">
                                                     <input type="button" class="btn btn-default"
                                                         name="fromDate_btn" id="fromDate_btn">
                                                 </div>
-                                            </div>
-                                            <div class="row form-group">                                           
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">To Date</label>
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Reason for Increase</label>
                                                 </div>
-                                                <div class="col-12 col-md-6 " style="display: inherit;">
-                                                    <input type="text"
-                                                        class="form-horizontal control-group form-control glyphicon glyphicon-calendar drop_down_list date_formate input_type_adjust transaction-input"
-                                                        name="toDate" placeholder="DD-MMM-YYYY"
-                                                        path=" Form Date" id="toDate">
-                                                    <input type="button" class="btn btn-default"
-                                                        name="toDate_btn" id="toDate_btn">
+                                                <div class="col-12 col-md-3 slidecontainer" style="display: inherit;">
+                                                    <select name="select" id="select" class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">OverSeas</option>
+                                                        <option value="2">Monthly Spend Increase</option>
+                                                        <option value="3">Offers Accepted</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Transaction Type </label>
+                                                <div class="col-12 col-md-3">
+                                                    <label class=" form-control-label">Remarks</label>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <select name="select" id="selectCard" class="form-control transaction-select">
-                                                            <option value="0">Please select</option>
-                                                            <option value="1">Both</option>
-                                                            <option value="2">Debit</option>
-                                                            <option value="3">Credit</option>
-                                                        </select>
+                                                <div class="col-12 col-md-5" style="display: inherit;">
+                                                    <textarea class="form-control" rows="3" id="comment" style="width:82%;"></textarea>
                                                 </div>
                                             </div>
-                                            
                                             <div class="row form-group">
                                                 <div class="col-12 col-md-12 text-center">
-                                                    <button type="submit" class="btn btn-success btn-md" id="getCardStatement" >
-                                                        Submit
+                                                    <button type="submit" class="btn btn-success btn-md commonButton" id="upgradeRequest" >
+                                                       Apply Now
                                                     </button>
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="transactionTableClass">
-                                            <table class="table table-striped" id="transactionTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Date</th>
-                                                        <th>Reference No</th>
-                                                        <th>Description</th>
-                                                        <th>Card No</th>
-                                                        <th>Debit</th>
-                                                        <th>Credit</th>
-                                                    </tr>
-                                                </thead>					
-                                                <tbody id="card1Table" style="display:none;">
-                                                    <tr>
-                                                        <td>15-05-2018</td>
-                                                        <td>8400110</td>
-                                                        <td>Payment Received</td>
-                                                        <td>4488-XXXX-XXXX-5518</td>
-                                                        <td></td>
-                                                        <td>USD 125000</td>
-                                                    </tr>
-                                                    <tr>				
-                                                        <td>14-05-2018</td>
-                                                        <td>8300345</td>
-                                                        <td>BABA CONFECTIONERY</td>
-                                                        <td>4448-XXX-XXXX-5518</td>
-                                                        <td>USD 6800</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>					
-                                                        <td>06-05-2018</td>
-                                                        <td>8300135</td>
-                                                        <td>B Q000000000000000</td>
-                                                        <td>4448-XXX-XXXX-5518</td>
-                                                        <td>USD 25000</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                                <tbody id="card2Table" style="display:none;">
-                                                    <tr>				
-                                                        <td>30-04-2018</td>
-                                                        <td>7990000</td>
-                                                        <td>ADOBE CREATIVE CLOUD</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 15000</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>								
-                                                        <td>30-04-2018</td>
-                                                        <td>7998100</td>
-                                                        <td>ASDA HOME SHOPPING</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 6800</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>									
-                                                        <td>28-04-2018</td>
-                                                        <td>7891395</td>
-                                                        <td>WWW.OXFORDSHIRE.GOV</td>
-                                                        <td>4448-XXX-XXXX-5500</td>
-                                                        <td>USD 7645</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -412,6 +358,8 @@
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
     <script src="vendor/bootstrap-4.1/moment.min.js"></script>
     <script src="vendor/bootstrap-4.1/jquery.dataTables.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap-slider.min.js"></script>
+    <script src="vendor/bootstrap-4.1/rangeslider.min.js"></script>
     <!-- Vendor JS       -->
     <!-- <script type="text/javascript" src="vendor/bootstrap-4.1/bootstrap-datetimepicker.js" charset="UTF-8"></script> -->
     <script type="text/javascript" src="vendor/bootstrap-4.1/bootstrap-datepicker.min.js" charset="UTF-8"></script>
