@@ -1668,6 +1668,41 @@
   }
 
 })(jQuery);
+$("#fundTransfer").hover(function(){
+    $("#fundTransfericon1").hide();
+    $("#fundTransfericon2").show();
+},function(){
+  $("#fundTransfericon1").show();
+  $("#fundTransfericon2").hide();
+});
+$("#balanceTransfer").hover(function(){
+  $("#balanceTransfericon1").hide();
+  $("#balanceTransfericon2").show();
+},function(){
+$("#balanceTransfericon1").show();
+$("#balanceTransfericon2").hide();
+});
+$("#autoPay").hover(function(){
+  $("#autoPayicon1").hide();
+  $("#autoPayicon2").show();
+},function(){
+$("#autoPayicon1").show();
+$("#autoPayicon2").hide();
+});
+$("#loadWallet").hover(function(){
+  $("#loadWalleticon1").hide();
+  $("#loadWalleticon2").show();
+},function(){
+$("#loadWalleticon1").show();
+$("#loadWalleticon2").hide();
+});
+$("#WalletTransferbob").hover(function(){
+  $("#WalletTransferbobicon1").hide();
+  $("#WalletTransferbobicon2").show();
+},function(){
+$("#WalletTransferbobicon1").show();
+$("#WalletTransferbobicon2").hide();
+});
 //to avoid reload on button click
 $(".commonButton").on("click",function(){
   return false;

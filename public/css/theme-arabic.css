@@ -80,7 +80,17 @@ img {
 p {
     margin: 0;
 }
-
+.fundTransfericon{
+    max-width: 10%;
+    height: auto;
+   
+    margin-left: 12px;
+}
+.walletTransferIcon{
+    margin-left: 10px;
+    max-width: 13.3%;
+    /* margin-right: 15px; */
+}
 .table-responsive {
     padding-right: 1px;
 }
@@ -383,7 +393,7 @@ section {
 }
 
 .section__content--p30 {
-    padding: 0 30px;
+    padding: 0 0px;
 }
 .section__content--p30_Card{
         padding: 15px 0px;
@@ -427,7 +437,7 @@ section {
 
 .page-container2 {
     background: #f2f2f2;
-    padding-left: 275px;
+    padding-left: 259px;
 }
 
 @media (max-width: 991px) {
@@ -2241,7 +2251,7 @@ section {
 .menu-sidebar2 {
     width: 275px;
     position: fixed;
-    left: 0;
+    left: 1091px;
     top: 0;
     bottom: 0;
     background: #fff;
@@ -2328,13 +2338,16 @@ section {
 .account2 > a:hover {
     color: #666;
 }
-
+.has-sub .js-arrow .arrow{
+    padding-right: 230px;
+}  
 .menu-sidebar2__content {
     height: -webkit-calc(100vh - 75px);
     height: -moz-calc(100vh - 75px);
     height: calc(100vh - 75px);
     border-right: 1px solid #e5e5e5;
     position: relative;
+    border-left:1px solid #e5e5e5;
     /* background: linear-gradient(#00bf35,#365cad); */
 }
 
@@ -2432,13 +2445,13 @@ section {
 .header-desktop2 {
     height: 75px;
     background-repeat: no-repeat;
-    background-image: url(../images/icon/headerBg.png);
+    background-image: url(../images/icon/headerBg_arabic.png);
     /* background: #4272d7; */
     position: fixed;
     z-index: 1001;
     top: 0;
     right: 0;
-    left: 275px;
+    left: 0px;
 }
 
 @media (max-width: 991px) {
@@ -2459,11 +2472,11 @@ section {
 
 .header-wrap2 {
     display: -webkit-box;
-    display: -webkit-flex;
+    /* display: -webkit-flex; */
     display: -moz-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
+    /* display: flex; */
+    /* -webkit-box-pack: end; */
     -webkit-justify-content: flex-end;
     -moz-box-pack: end;
     -ms-flex-pack: end;
@@ -2506,6 +2519,7 @@ section {
 
 .header-button2 .header-button-item .search-dropdown {
     top: 52px;
+    left:-69px;
 }
 
 @media (max-width: 991px) {
@@ -2527,18 +2541,19 @@ section {
 .header-button2 .header-button-item .notifi-dropdown {
     top: 52px;
     left: auto;
-    right: -68px;
-    -webkit-transform-origin: right top;
-    -moz-transform-origin: right top;
-    -ms-transform-origin: right top;
-    -o-transform-origin: right top;
-    transform-origin: right top;
+    /* right: -68px; */
+    right: -304px;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
 }
 
 .header-button2 .header-button-item .notifi-dropdown::before {
     margin-left: 0;
-    left: auto;
-    right: 68px;
+    left: 15px;
+    /* right: 68px; */
 }
 
 @media (max-width: 991px) {
@@ -2636,7 +2651,7 @@ section {
     border-right: 9px solid transparent;
     position: absolute;
     top: -18px;
-    right: 125px;
+    right: 251px;
 }
 
 .search-dropdown form {
@@ -2653,7 +2668,7 @@ section {
 .search-dropdown .search-dropdown__icon {
     position: absolute;
     top: 0;
-    left: 26px;
+    left: 295px;
     font-size: 24px;
     color: #c9c9c9;
     height: 63px;
@@ -4003,8 +4018,8 @@ section {
     /* padding-bottom: 74px; */
     /* margin-bottom: 40px; */
     margin-top: 10px;
-    margin-right: -35px;
-    margin-left: -20px;
+    margin-right: 4px;
+    margin-left: -10px;
 }
 .scroll-notifications{
     /* border: 1px solid #e5e5e5; */
@@ -4018,6 +4033,7 @@ section {
     margin-top: 10px;
     margin-right: -35px;
     margin-left: 15px;
+    
 }
 .task-progress .title-3 {
     margin-bottom: 0px;
@@ -5139,7 +5155,7 @@ table.dataTable thead th, table.dataTable thead td {
     padding-top: 20px;
 }
 .footerClass{
-    padding-left: 700px;
+    padding-left: 425px;
     font-size: 12px; 
     position: fixed;
     color: black;
@@ -5147,6 +5163,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 .homeContainer{
     background: white;
+    right:259px;
 }
 .copyright p {
     font-size: 11px;
@@ -5178,6 +5195,7 @@ table.dataTable thead th, table.dataTable thead td {
 
     .au-breadcrumb.m-t-75 {
         margin-top: 0;
+        right:259px;
     }
 }
 
@@ -5474,10 +5492,14 @@ table.dataTable thead th, table.dataTable thead td {
 .au-progress .au-progress__bar {
     height: 10px;
     position: relative;
-    background: #d9d9d9;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    background: #4272d7;
+    /* -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; */
+    /* border-radius: 5px; */
+   
+}
+.au-progress__bar .au-progress__inner{
+    float:right;
 }
 
 .au-progress .au-progress__bar .au-progress__inner {
@@ -5486,14 +5508,14 @@ table.dataTable thead th, table.dataTable thead td {
     top: 0;
     left: 0;
     bottom: 0;
-    -webkit-border-radius: 5px;
+    /* -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 5px; */
     -webkit-transition: width 1s ease-in-out;
     -o-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
-    background-color: #4272d7;
+    background-color: #d9d9d9;
     overflow: visible;
 }
 
@@ -6911,6 +6933,7 @@ table.dataTable thead th, table.dataTable thead td {
 
 .m-t-75 {
     margin-top: 75px;
+    right:259px;
 }
 
 .m-r-75 {

@@ -18,7 +18,7 @@
     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-5/css/all.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    
+
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
@@ -64,10 +64,12 @@
                             </a>
                         </li>
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">نظرة عامة<i class="fas fa-tv"></i>
+                            <a class="js-arrow" href="#">
                                 <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
+                                نظرة عامة<i class="fas fa-tv"></i>
+                                
                             </a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
@@ -119,20 +121,25 @@
                             </ul>
                         </li>
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                تحويل الأموال<i class="fas fa-wallet"></i>
+                            <a class="js-arrow" href="#" id="fundTransfer">
+                                تحويل الأموال 
+                                <img src="images/icon/fund-transfer1.png" class="fundTransfericon"  id="fundTransfericon1" alt="User Icon" />
+                                <img src="images/icon/fund_transfe_blue.png" class="fundTransfericon" id="fundTransfericon2" alt="User Icon" style="display:none;" />
                                 <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
                             </a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="#">
-                                        تحميل المحفظة<i class="fas fa-wallet"></i></a>
+                                        <a  href="bob-loadWallet.html" id="loadWallet">
+                                               
+                                        تحميل المحفظة <img src="images/icon/load-wallet.png" class="fundTransfericon"  id="loadWalleticon1" alt="User Icon" />
+                                        <img src="images/icon/load-wallet_blue.png" class="fundTransfericon" id="loadWalleticon2" alt="User Icon" style="display:none;" /></a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        نقل المحفظة<i class="fas fa-wallet"></i></a>
+                                <li><a  href="bob-walletTransfer.html" id="WalletTransferbob">
+                                  
+                                        نقل المحفظة <img src="images/icon/wallet-transfer.png" class="walletTransferIcon"  id="WalletTransferbobicon1" alt="User Icon" />
+                                        <img src="images/icon/wallet-transfer_blue.png" class="walletTransferIcon" id="WalletTransferbobicon2" alt="User Icon" style="display:none;" /></a>
                                 </li>
                             </ul>
                         </li>
@@ -146,11 +153,11 @@
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
                                     <a href="#">
-                                        ينفق المحفظة<i class="fas fa-money-bill-wave"></i></a>
+                                        ينفق المحفظة<i class="fas fa-wallet"></i></a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        فئة الإنفاق<i class="fas fa-money-bill-wave"></i></a>
+                                        فئة الإنفاق<i class="fas fa-chart-pie"></i></a>
                                 </li>
                             </ul>
                         </li>
@@ -173,54 +180,55 @@
                                 </a>
                                 <!-- <img src="images/icon/headerBg.png" /> -->
                             </div>
-                            <div class="header-button2">
-                                <div class="header-button-item js-item-menu">
-                                    <i class="zmdi zmdi-search"></i>
-                                    <div class="search-dropdown js-dropdown">
-                                        <form action="">
-                                            <input class="au-input au-input--full au-input--h65" type="text" placeholder="Search for datas &amp; reports..." />
-                                            <span class="search-dropdown__icon">
-                                                <i class="zmdi zmdi-search"></i>
-                                            </span>
-                                        </form>
-                                    </div>
-                                </div>
+                            <div class="header-button2 text-right">
                                 <div class="header-button-item has-noti js-item-menu">
                                     <i class="zmdi zmdi-notifications"></i>
                                     <div class="notifi-dropdown js-dropdown">
                                         <div class="notifi__title">
-                                            <p>You have 3 Notifications</p>
+                                            <p>لديك 3 إشعارات</p>
                                         </div>
                                         <div class="notifi__item">
+                                            <div class="content">
+                                                <p style="padding-left: 55px;">لقد تلقيت إشعارًا عبر البريد الإلكتروني</p>
+                                                <span class="date" style="padding-left: 128px;">12 أبريل 2018 06:50</span>
+                                            </div>
                                             <div class="bg-c1 img-cir img-40">
                                                 <i class="zmdi zmdi-email-open"></i>
                                             </div>
-                                            <div class="content">
-                                                <p>You got a email notification</p>
-                                                <span class="date">April 12, 2018 06:50</span>
-                                            </div>
                                         </div>
                                         <div class="notifi__item">
+                                            <div class="content">
+                                                <p style="padding-left: 156px;">تم حظر حسابك</p>
+                                                <span class="date" style="padding-left: 128px;">12 أبريل 2018 06:50</span>
+                                            </div>
                                             <div class="bg-c2 img-cir img-40">
                                                 <i class="fa fa-exclamation-circle"></i>
                                             </div>
-                                            <div class="content">
-                                                <p>Your account has been blocked</p>
-                                                <span class="date">April 12, 2018 06:50</span>
-                                            </div>
                                         </div>
                                         <div class="notifi__item">
+                                            <div class="content">
+                                                <p style="padding-left: 108px;">لقد حصلت على ملف جديد</p>
+                                                <span class="date" style="padding-left: 128px;">12 أبريل 2018 06:50</span>
+                                            </div>
                                             <div class="bg-c3 img-cir img-40">
                                                 <i class="zmdi zmdi-file-text"></i>
                                             </div>
-                                            <div class="content">
-                                                <p>You got a new file</p>
-                                                <span class="date">April 12, 2018 06:50</span>
-                                            </div>
                                         </div>
                                         <div class="notifi__footer">
-                                            <a href="#">All notifications</a>
+                                            <a href="#">كل الإخطارات</a>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="header-button-item js-item-menu">
+                                    <i class="zmdi zmdi-search"></i>
+                                    <div class="search-dropdown js-dropdown">
+                                        <form action="">
+                                                <span class="search-dropdown__icon">
+                                                        <i class="zmdi zmdi-search"></i>
+                                                    </span>
+                                            <input class="au-input au-input--full au-input--h65" type="text" placeholder="                          البحث عن البيانات والتقارير ..." />
+                                            
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -236,17 +244,18 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="au-breadcrumb-content">
-                                    <div class="au-breadcrumb-left">
-                                        <span class="au-breadcrumb-span">آخر تسجيل: 23 مايو 2018 07:12</span>
+                                    <div class="au-breadcrumb-left" style="text-align: left">
+                                        <strong>رقم الحساب: 1003000000000124092</strong> </span><br/>
+                                            <strong>دولار سنغافوري رصيد الحساب:10302.78 </strong></span>
                                     </div>
                                     <div class="au-breadcrumb-center">
-                                        <a href="bob-landing.html" style="padding-left: 460px;    text-decoration: underline;
+                                        <a href="bob-landing.html" style="padding-right: 460px;    text-decoration: underline;
                                         font-size: 14px;">الإنجليزية</a>
                                     </div>
-                                    <div class="au-breadcrumb-right" style="text-align: right">
-               						 <strong>رقم الحساب: 1003000000000124092</strong> </span><br/>
-                                         <strong>دولار سنغافوري رصيد الحساب:10302.78 </strong></span>
-                                    </div>    
+                                    
+                                    <div class="au-breadcrumb-right" style="padding-right: 15px;">
+                                        <span class="au-breadcrumb-span">آخر تسجيل: 23 مايو 2018 07:12</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -259,50 +268,7 @@
                 <div class="section__content section__content--p30 homeContainer">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xl-5">
-                                <!-- RECENT REPORT 2-->
-                                <div class="recent-report2">
-                                    <h3 class="title-3">المصروفات الشهرية البطاقة المسبقة الدفع</h3>
-                                    <div class="recent-report__chart">
-                                        <canvas id="recent-rep2-chart"></canvas>
-                                    </div>
-                                </div>
-                                <!-- END RECENT REPORT 2             -->
-                            </div>
-                            <div class="col-xl-4">
-                                <!-- TASK PROGRESS-->
-                                <div class="task-progress">
-                                    <h3 class="title-3">نفقات</h3>
-                                    <div class="au-skill-container">
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">Miscellanous</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="90">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">E-Commerce</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="85">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">Fuel</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="95">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END TASK PROGRESS-->
-                            </div>
-                            <div class="col-xl-3 scroll-img">
+                            <div class="col-xl-3 scroll-img" style="right: 19px;">
                                 <div class="scroll-notifications">
                                         <!-- <iframe src="http://corporate-payout-card.wirecard.com/"></iframe> -->
                                     <marquee behavior="scroll" scrollamount="3" direction="up" style="height:194px;">
@@ -315,8 +281,51 @@
                                         <img src="images/Scroll-Images/img7.jpg" alt="scroll" /> -->
                                     </marquee>
                                 </div>
-                            </div> 
-                            
+                            </div>
+                            <div class="col-xl-4" style="right: 5.5px;">
+                                <!-- TASK PROGRESS-->
+                                <div class="task-progress">
+                                    <h3 class="title-3">نفقات</h3>
+                                    <div class="au-skill-container">
+                                        <div class="au-progress text-right">
+                                            <span class="au-progress__title">متنوع</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="10">
+                                                    <span class="au-progress__value ">90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress text-right">
+                                            <span class="au-progress__title">التجارة الإلكترونية</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="15" >
+                                                    <span class="au-progress__value " >85%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress text-right">
+                                            <span class="au-progress__title">وقود</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="5">
+                                                    <span class="au-progress__value">95%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END TASK PROGRESS-->
+                            </div>
+
+                            <div class="col-xl-5" style="right: -5px;">
+                                <!-- RECENT REPORT 2-->
+                                <div class="recent-report2">
+                                    <h3 class="title-3">المصروفات الشهرية البطاقة المسبقة الدفع</h3>
+                                    <div class="recent-report__chart">
+                                        <canvas id="recent-rep2-chart"></canvas>
+                                    </div>
+                                </div>
+                                <!-- END RECENT REPORT 2             -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -325,129 +334,134 @@
                 <div class="section__content section__content--Splitter homeContainer">
                     <div class="container-fluid">
                         <div class="row splitter-panel row-fluid page-module transparent">
-                            <div class="col-xl-3 Splitter splitter-tile span4">
-                                <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
-                                    <li>
-                                        <a href="bob-card-summary.html">
-                                        <i class="far fa-chart-bar" style="margin-right:5px;"></i> Card Summary <span class="arrow" style="margin-left: 25px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Account wise details of card holder</p> -->
-                                    </li>
-                                    <li>
-                                        <a href="bob-transactions.html">
-                                            <i class="fas fa-exchange-alt" style="margin-right:10px;"></i>Transactions<span class="arrow" style="margin-left: 42px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Recent transaction details of card holder</p> -->
-                                    </li>
-                                    <li>
-                                        <a href="bob-profile-Info.html">
-                                            <i class="fa fa-user" style="margin-right:10px;"></i>Profile Info<span class="arrow" style="margin-left: 64px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Recent transaction details of card holder</p> -->
-                                    </li>
-                                    <li>
-                                        <a href="bob-rewards.html">
-                                            <i class="fas fa-trophy" style="margin-right:10px;"></i>Rewards<span class="arrow" style="margin-left: 76px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Recent transaction details of card holder</p> -->
-                                    </li>
-                                </ul>
-                                <div style="opacity: 0; " class="splitter-tile-overlay open">
-                                        <h3><i class="fas fa-tv" style="margin-right:10px;"></i>Overview</h3>
-                                        <p>Read only details of card holder</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 Splitter splitter-tile span4">
-                                <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
-                                    <li>
-                                        <a href="bob-statement.html">
-                                        <i class="far fa-chart-bar" style="margin-right: 5px;"></i> Statements<span class="arrow" style="margin-left: 54px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Options to view previously generated billing statements</p> -->
-                                    </li>
-                                    <li>
-                                        <a href="bob-generatePin.html">
-                                            <i class="fab fa-buromobelexperte" style="margin-right: 5px;"></i>Generate Pin<span class="arrow" style="margin-left: 50px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Options to change pin or generate a new pin</p> -->
-                                    </li>
-                                    <li>
-                                        <a href="bob-blockcard.html">
-                                            <i class="fas fa-ban" style="margin-right: 5px;"></i>Block Card<span class="arrow" style="margin-left: 65px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Options to report and deactivate card</p> -->
-                                     </li>
-                                     <li>
-                                        <a href="bob-redeemPoints.html">
-                                            <i class="fas fa-gift" style="margin-right: 5px;"></i>Redeem Points<span class="arrow" style="margin-left: 30px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Options to configure wallet wise limits</p> -->
-                                    </li>
-                                    <li>
-                                        <a href="bob-controlSpends.html">
-                                            <i class="fas fa-money-bill-alt" style="margin-right: 5px;"></i>Control Spends<span class="arrow" style="margin-left: 26px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Options to configure wallet wise limits</p> -->
-                                    </li>
-                                </ul>
-                                <div style="opacity:0; " class="splitter-tile-overlay open">
-                                        <h3> <i class="fas fa-cogs" style="margin-right:10px;"></i>Self Service</h3>
-                                        <p>Frequently used services of card holder like pin change</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 Splitter splitter-tile span4">
+                            <div class="col-xl-3 Splitter splitter-tile span4 text-right">
                                 <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
                                     <li>
                                         <a href="#">
-                                        <i class="fas fa-wallet"  style="margin-right: 5px;"></i>Load Wallet<span class="arrow" style="margin-left:58px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Options to transfer money across wallets</p> -->
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                        <i class="fas fa-wallet"  style="margin-right: 5px;"></i>Wallet Transfer<span class="arrow" style="margin-left:31px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
-                                        <!-- <p>Options to transfer money across wallets</p> -->
-                                    </li>
-                                </ul>
-                                <div style="opacity: 0; " class="splitter-tile-overlay open">
-                                        <h3><i class="fas fa-wallet" style="margin-right:10px;"></i>Fund Transfer</h3>
-                                        <p>Options to transfer money across wallets</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 Splitter splitter-tile span4">
-                                <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
-                                    <li>
-                                        <a href="#">
-                                        <i class="fas fa-money-bill-wave" style="margin-right:1px;"></i>Wallet Spends<span class="arrow" style="margin-left: 38px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
+                                        <span class="arrow" style="margin-right: 86px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>ينفق المحفظة <i class="fas fa-wallet" style="margin-left:1px;"></i></a>
                                         <!-- <p>Expenses summarized based on expense groups</p> -->
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fas fa-money-bill-wave"style="margin-right:5px;"></i>Spends Category<span class="arrow" style="margin-left: 10px;">
-                                            <i class="fas fa-angle-right"></i>
-                                        </span></a>
+                                        <span class="arrow" style="margin-right: 99px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>فئة الإنفاق<i class="fas fa-chart-pie"style="margin-left:5px;"></i></a>
                                         <!-- <p>Expenses summarized on a monthly basis</p> -->
                                     </li>
                                 </ul>
                                 <div style="opacity: 0; " class="splitter-tile-overlay open">
-                                        <h3><i class="fa fa-file" style="margin-right:10px;"></i>Reports</h3>
-                                        <p>Graphical representation on Expenses</p>
+                                        <h3 style="font-size: 20px;">تقارير<i class="fa fa-file" style="margin-left:10px;"></i></h3>
+                                        <p>تمثيل رسومي على المصروفات</p>
                                 </div>
                             </div>
+                            <div class="col-xl-3 Splitter splitter-tile span4 text-right">
+                                <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
+                                    <li>
+                                        <a href="#"><span class="arrow" style="margin-right:70px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>
+                                        تحميل المحفظة <img src="images/icon/load-wallet.png" class="fundTransfericon"style="margin-left: 5px;" /></a>
+                                        <!-- <p>Options to transfer money across wallets</p> -->
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                        <span class="arrow" style="margin-right:90px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>نقل المحفظة
+                                        <img src="images/icon/wallet-transfer.png" class="walletTransferIcon" style="margin-right: 0px;"/></a>
+                                        <!-- <p>Options to transfer money across wallets</p> -->
+                                    </li>
+                                </ul>
+                                <div style="opacity: 0; " class="splitter-tile-overlay open">
+                                        <h3 style="font-size: 20px;"> تحويل الأموال<img src="images/icon/fund_transfe_white.png" class="fundTransfericon" alt="User Icon" /></h3>
+                                        <p>خيارات لتحويل الأموال عبر محافظ</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 Splitter splitter-tile span4 text-right">
+                                <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
+                                    <li>
+                                        <a href="bob-statement.html">
+                                        <span class="arrow" style="margin-right: 108px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>صياغات<i class="far fa-chart-bar" style="margin-left: 5px;"></i></a>
+                                        <!-- <p>Options to view previously generated billing statements</p> -->
+                                    </li>
+                                    <li>
+                                        <a href="bob-generatePin.html">
+                                        <span class="arrow" style="margin-right: 94px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>توليد دبوس <i class="fab fa-buromobelexperte" style="margin-left: 5px;"></i></a>
+                                        <!-- <p>Options to change pin or generate a new pin</p> -->
+                                    </li>
+                                    <li>
+                                        <a href="bob-blockcard.html">
+                                        <span class="arrow" style="margin-right: 102px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>بلوك كارد<i class="fas fa-ban" style="margin-left: 5px;"></i></a>
+                                        <!-- <p>Options to report and deactivate card</p> -->
+                                        </li>
+                                        <li>
+                                        <a href="bob-redeemPoints.html">
+                                        <span class="arrow" style="margin-right: 84px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span> استبدال النقاط<i class="fas fa-gift" style="margin-left: 5px;"></i></a>
+                                        <!-- <p>Options to configure wallet wise limits</p> -->
+                                    </li>
+                                    <li>
+                                        <a href="bob-controlSpends.html">
+                                        <span class="arrow" style="margin-right: 51px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span> السيطرة على الإنفاق<i class="fas fa-money-bill-alt" style="margin-right: 0px;"></i></a>
+                                        <!-- <p>Options to configure wallet wise limits</p> -->
+                                    </li>
+                                </ul>
+                                <div style="opacity:0; " class="splitter-tile-overlay open">
+                                        <h3 style="font-size: 20px;"> خدمة ذاتية، إخدم نفسك بنفسك
+                                                <i class="fas fa-cogs" style="margin-right:-8px;"></i> </h3>
+                                        <p>الخدمات المستخدمة في كثير من الأحيان حامل البطاقة مثل تغيير دبوس</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 Splitter splitter-tile span4 text-right">
+                                <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
+                                    <li>
+                                        <a href="bob-card-summary.html">
+                                        <span class="arrow" style="margin-right: 75px;">
+                                                <i class="fas fa-angle-left"></i>
+                                        </span> ملخص البطاقة <i class="far fa-chart-bar" style="margin-left:5px;"></i></a>
+                                        <!-- <p>Account wise details of card holder</p> -->
+                                    </li>
+                                    <li>
+                                        <a href="bob-transactions.html">
+                                        <span class="arrow" style="margin-right: 97px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span> </i>المعاملات<i class="fas fa-exchange-alt" style="margin-left:10px;"></i></a>
+                                        <!-- <p>Recent transaction details of card holder</p> -->
+                                    </li>
+                                    <li>
+                                        <a href="bob-profile-Info.html">
+                                        <span class="arrow" style="margin-right: 55px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span> معلومات الشخصي<i class="fa fa-user" style="margin-left:10px;"></i></a>
+                                        <!-- <p>Recent transaction details of card holder</p> -->
+                                    </li>
+                                    <li>
+                                        <a href="bob-rewards.html">
+                                        <span class="arrow" style="margin-right: 103px;">
+                                            <i class="fas fa-angle-left"></i>
+                                        </span>المكافآت<i class="fas fa-trophy" style="margin-left:10px;"></i></a>
+                                        <!-- <p>Recent transaction details of card holder</p> -->
+                                    </li>
+                                </ul>
+                                <div style="opacity: 0; " class="splitter-tile-overlay open">
+                                        <h3 style="font-size: 20px;">نظرة عامة<i class="fas fa-tv" style="margin-left:10px;"></i></h3>
+                                        <p>قراءة تفاصيل فقط من حامل </p>
+                                </div>
+                            </div>
+                            
+                            
+                            
                         </div>
                     </div>
                     <!-- <div class="container-fluid" style="background-color:#e5e5e5;color:black;    ">
@@ -461,7 +475,7 @@
         </div>
     </div>
     <div class="footer-copyright text-center footerClass" >
-            © 2018 Copyright Wirecard 
+            © 2018 Copyright Wirecard
     </div>
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
@@ -489,7 +503,7 @@
     <script src="vendor/vector-map/jquery.vmap.world.js"></script>
 
     <!-- Main JS-->
-    <script src="js/main.js"></script>
+    <script src="js/main-arabic.js"></script>
 
 </body>
 
