@@ -4040,18 +4040,29 @@ section {
     margin-right: -35px;
     margin-left: -20px;
 }
+#arabicLink{
+    text-decoration: underline;
+    font-size: 12px;
+    color:white;
+     margin-top: 5px;    
+}
+#slideshow > div {
+    position: absolute;
+    /* top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 10px; */
+  }
 .scroll-notifications{
-    /* border: 1px solid #e5e5e5; */
+    border: 1px solid #e5e5e5;
     background: #fff;
-    /* padding: 18px; */
     text-align: center;
-    /* padding-top: 42px; */
-    /* padding-right: 55px; */
-    /* padding-bottom: 74px; */
-    /* margin-bottom: 40px; */
     margin-top: 10px;
     margin-right: -35px;
     margin-left: 15px;
+    position: relative;
+    width: 238px;
+    height: 195px;
 }
 .task-progress .title-3 {
     margin-bottom: 0px;

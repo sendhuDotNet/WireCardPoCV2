@@ -128,7 +128,8 @@
                         <li class="has-sub" >
                             <a class="js-arrow" href="#" id="fundTransfer">
                                 <img src="images/icon/fund-transfer1.png" class="fundTransfericon"  id="fundTransfericon1" alt="User Icon" />
-                                <img src="images/icon/fund_transfe_blue.png" class="fundTransfericon" id="fundTransfericon2" alt="User Icon" style="display:none;" />Fund Transfer
+                                <img src="images/icon/fund_transfe_blue.png" class="fundTransfericon" id="fundTransfericon2" alt="User Icon" style="display:none;" />
+                                <p style="display: inline-block;">Fund Transfer</p>
                                 <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
@@ -137,12 +138,14 @@
                                 <li>
                                         <a  href="alice-autoPay.html" id="autoPay">
                                                 <img src="images/icon/auto-pay.png" class="balanceTransferIcon"  id="autoPayicon1" alt="User Icon" />
-                                                <img src="images/icon/auto-pay_blue.png" class="balanceTransferIcon" id="autoPayicon2" alt="User Icon" style="display:none;" />Auto Pay</a>
+                                                <img src="images/icon/auto-pay_blue.png" class="balanceTransferIcon" id="autoPayicon2" alt="User Icon" style="display:none;" />
+                                                <p style="display: inline-block;">Auto Pay</p></a>
                                 </li>
                                 <li>
                                         <a  href="alice-balanceTransfer.html" id="balanceTransfer">
                                                 <img src="images/icon/balance-transfer.png" class="balanceTransferIcon"  id="balanceTransfericon1" alt="User Icon" />
-                                                <img src="images/icon/balance-transfer_blue.png" class="balanceTransferIcon" id="balanceTransfericon2" alt="User Icon" style="display:none;" />Balance Transfer</a>
+                                                <img src="images/icon/balance-transfer_blue.png" class="balanceTransferIcon" id="balanceTransfericon2" alt="User Icon" style="display:none;" />
+                                                <p style="display: inline-block;">Balance Transfer</p></a>
                                 </li>
                             </ul>
                         </li>
@@ -309,17 +312,20 @@
                                 <!-- END TASK PROGRESS-->
                             </div>
                             <div class="col-xl-3 scroll-img">
-                                <div class="scroll-notifications">
+                                <div class="scroll-notifications" id="slideshow">
                                         <!-- <iframe src="http://corporate-payout-card.wirecard.com/"></iframe> -->
-                                    <marquee behavior="scroll" scrollamount="1" direction="up" style="height:194px;">
+                                    <!-- <marquee behavior="scroll" scrollamount="1" direction="up" style="height:194px;">
                                         <img src="images/Scroll-Images/campaign1.png" alt="scroll" />
                                         <img src="images/Scroll-Images/campaign2.png" alt="scroll" />
                                         <img src="images/Scroll-Images/campaign3.png" alt="scroll" />
-                                        <!-- <img src="images/Scroll-Images/img4.jpg" alt="scroll" />
+                                        <img src="images/Scroll-Images/img4.jpg" alt="scroll" />
                                         <img src="images/Scroll-Images/img5.jpg" alt="scroll" />
                                         <img src="images/Scroll-Images/img6.jpg" alt="scroll" />
-                                        <img src="images/Scroll-Images/img7.jpg" alt="scroll" /> -->
-                                    </marquee>
+                                        <img src="images/Scroll-Images/img7.jpg" alt="scroll" />
+                                    </marquee> -->
+                                    <div><img class="mySlides" src="images/Scroll-Images/campaign1.png" style="width:100%"></div>
+                                    <div><img class="mySlides" src="images/Scroll-Images/campaign2.png" style="width:100%"></div>
+                                    <div><img class="mySlides" src="images/Scroll-Images/campaign3.png" style="width:100%"></div>
                                 </div>
                             </div> 
                             
@@ -399,7 +405,7 @@
                                      </li>
                                      <li>
                                         <a href="alice-redeemPoints.html">
-                                            <i class="fas fa-gift" style="margin-right: 5px;"></i>Redeem Points<span class="arrow" style="margin-left: 30px;">
+                                            <i class="fas fa-gift" style="margin-right: 5px;"></i>Redeem Points<span class="arrow" style="margin-left: 34px;">
                                             <i class="fas fa-angle-right"></i>
                                         </span></a>
                                         <!-- <p>Options to configure wallet wise limits</p> -->
@@ -443,14 +449,14 @@
                                 <ul class="list-unstyled navbar__sub-list js-sub-list Splitter-menu">
                                     <li>
                                         <a href="alice-monthlyExpenses.html">
-                                        <i class="far fa-calendar-alt" style="margin-right:1px;"></i>Monthly Expenses<span class="arrow" style="margin-left: 11px;">
+                                        <i class="far fa-calendar-alt" style="margin-right:1px;"></i>Monthly Expenses<span class="arrow" style="margin-left: 18px;">
                                             <i class="fas fa-angle-right"></i>
                                         </span></a>
                                         <!-- <p>Expenses summarized based on expense groups</p> -->
                                     </li>
                                     <li>
                                         <a href="alice-expensesCategory.html">
-                                            <i class="fas fa-chart-pie"style="margin-right:5px;"></i>Spends Category<span class="arrow" style="margin-left: 10px;">
+                                            <i class="fas fa-chart-pie"style="margin-right:5px;"></i>Spends Category<span class="arrow" style="margin-left: 12px;">
                                             <i class="fas fa-angle-right"></i>
                                         </span></a>
                                         <!-- <p>Expenses summarized on a monthly basis</p> -->

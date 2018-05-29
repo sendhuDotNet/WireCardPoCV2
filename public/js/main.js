@@ -1668,6 +1668,16 @@
   }
 
 })(jQuery);
+$("#slideshow > div:gt(0)").hide();
+
+  setInterval(function() {
+    $('#slideshow > div:first')
+      .fadeOut(2000)
+      .next()
+      .fadeIn(2000)
+      .end()
+      .appendTo('#slideshow');
+  }, 4000);
 $("#fundTransfer").hover(function(){
     $("#fundTransfericon1").hide();
     $("#fundTransfericon2").show();
@@ -1900,7 +1910,7 @@ $("#confirmPointsRedeem").on("click",function(){
   $('input[type="radio"][value=pp]').attr("checked",checked);
 });
 $("#setExpenseLimit").on("click",function(){
-  alert("Expenses limit successfully");
+  alert("Expenses limit set successfully");
 });
 $("#loadWalletConfirm").on("click",function(){
   $(".card-body-calculateWallet").hide();

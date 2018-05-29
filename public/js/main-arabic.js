@@ -409,10 +409,10 @@
         var myChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: ['كانون الثاني', 'شهر فبراير', 'مارس', 'أبريل', 'قد', ''],
+            labels: ['', 'قد', 'أبريل', 'مارس', 'فبراير', 'يناير'],
             datasets: [
               {
-                label: 'My First dataset',
+                label: 'مجموعة بياناتي الأولى',
                 backgroundColor: brandService2,
                 borderColor: bd_brandService2,
                 pointHoverBackgroundColor: '#fff',
@@ -421,7 +421,7 @@
   
               },
               {
-                label: 'My Second dataset',
+                label: 'مجموعة البيانات الثانية الخاصة بي',
                 backgroundColor: brandProduct2,
                 borderColor: bd_brandProduct2,
                 pointHoverBackgroundColor: '#fff',
@@ -448,7 +448,29 @@
                   fontSize: 12
                 }
               }],
-              yAxes: [{
+              yAxes: [
+              //   {
+              //   id: 'A',
+              //   type: 'linear',
+              //   position: 'left',
+              //   ticks: {
+              //      beginAtZero: true,
+              //      maxTicksLimit: 5,
+              //      stepSize: 50,
+              //      max: 150,
+              //      fontFamily: "Poppins",
+              //      fontSize: 12
+              //   },
+              //   gridLines: {
+              //        display: true,
+              //         color: '#f2f2f2'
+      
+              //      }
+              // }, 
+              {
+                id: 'B',
+                type: 'linear',
+                position: 'right',
                 ticks: {
                   beginAtZero: true,
                   maxTicksLimit: 5,
@@ -456,12 +478,12 @@
                   max: 150,
                   fontFamily: "Poppins",
                   fontSize: 12
-                },
-                gridLines: {
-                  display: true,
-                  color: '#f2f2f2'
-  
-                }
+               },
+               gridLines: {
+                    display: true,
+                     color: '#f2f2f2'
+     
+                  }
               }]
             },
             elements: {
@@ -1668,6 +1690,16 @@
     }
   
   })(jQuery);
+  $("#slideshow > div:gt(0)").hide();
+
+  setInterval(function() {
+    $('#slideshow > div:first')
+      .fadeOut(2000)
+      .next()
+      .fadeIn(2000)
+      .end()
+      .appendTo('#slideshow');
+  }, 4000);
   $("#fundTransfer").hover(function(){
     $("#fundTransfericon1").hide();
     $("#fundTransfericon2").show();
