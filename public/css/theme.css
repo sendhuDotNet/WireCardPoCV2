@@ -4073,6 +4073,9 @@ section {
 .task-progress .au-progress {
     padding: 0px 0;
 }
+.splitter-tile-overlay p{
+    margin-left: 40px;
+}
 .Splitter{
     border: 1px solid #e5e5e5;
     background: #ffff;
